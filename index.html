@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجري الإلكتروني</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* تحديد الشعار */
+        .logo {
+            width: 100px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* توسيط الصورة العرضية */
+        nav {
+            text-align: center;
+        }
+
+        /* تنسيق المنتجات */
+        .products-container {
+            overflow-x: auto;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+            scroll-behavior: smooth;
+            text-align: center;
+        }
+
+        .product {
+            display: inline-block;
+            margin: 20px;
+            text-align: center;
+            width: 200px;
+        }
+
+        .product img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 2px solid #333;
+            border-radius: 8px;
+        }
+
+        /* تحديد موقع أسماء الأقسام */
+        h2 {
+            text-align: right;
+            direction: rtl;
+        }
+
+        /* تخصيص زر "اشتري الآن" */
+        .buy-button {
+            display: inline-block;
+            background-color: #000000;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .buy-button:hover {
+            background-color: #000000;
+        }
+
+        /* شريط سفلي */
+        .footer {
+            background-color: #1a1414;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        /* ترويجي */
+        .promotion {
+            background-color: #ff0000;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .customer-reviews {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .review-card {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            width: calc(20% - 20px); /* 20% من عرض الشاشة مع هامش بين البطاقات */
+            text-align: center;
+        }
+
+        .review-card p {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .star {
+            color: gold; /* لون النجوم الأصفر */
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <!-- شريط التنقل للحواسيب -->
+        <div class="desktop-navbar">
+            <a href="https://i.ibb.co/3N0W4yK/logo.png"><img src="https://i.ibb.co/3N0W4yK/logo.png" alt="شعار المتجر" class="logo"></a>
+            <ul class="navbar">
+                <li><a href="#">الصفحة الرئيسية</a></li>
+                <li><a href="pls.html">اشتراكات بلس</a></li>
+                <li><a href="inst.html">خدمة التواصل الاجتماعي</a></li>
+                <li><a href="syn.html">اشتراكات البرامج</a></li>
+            </ul>
+        </div>
+
+        <!-- قائمة الهامبرغر للهواتف النقالة -->
+        <div class="mobile-navbar">
+            <a href="https://i.ibb.co/3N0W4yK/logo.png"><img src="https://i.ibb.co/3N0W4yK/logo.png" alt="شعار المتجر" class="logo"></a>
+            <ul class="navbar">
+                <li class="hamburger-menu"><a href="#" onclick="toggleMenu()">☰</a></li>
+                <ul class="mobile-menu" id="mobileMenu">
+                    <li><a href="pls.html">اشتراكات بلس</a></li>
+                    <li><a href="inst.html">التواصل الاجتماعي</a></li>
+                    <li><a href="syn.html">اشتراكات البرامج</a></li>
+                </ul>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- القسم الأول: اشتراكات بلس -->
+    <div class="promotion">
+        <p>خلك قريب من المتجر فيه عروضات متميزة بتنزل </p>
+    </div>
+    <h2>اشتراكات بلس</h2>
+    <div class="products-container">
+        <div class="product">
+            <img src="https://image.api.playstation.com/vulcan/ap/rnd/202206/1415/zf1APgZErNQcDBYLlrp7HGsX.png" alt="صورة المنتج">
+            <p>السعر: $50</p>
+            <p>غير متوفر حاليًا</p>
+            <a href="" class="details-button">تفاصيل المنتج</a>
+            <a href="" class="buy-button" onclick="showNotAvailableMessage()">اشتري الآن</a>
+        </div>
+        <div class="product">
+            <img src="https://image.api.playstation.com/vulcan/ap/rnd/202206/1515/RM9pdb59tlZpAJvyJMsuHKjq.png" alt="صورة المنتج">
+            <p>السعر: $60</p>
+            <p>غير متوفر حاليًا</p>
+            <a href="" class="details-button">تفاصيل المنتج</a>
+            <a href="" class="buy-button" onclick="showNotAvailableMessage()">اشتري الآن</a>
+        </div>
+        <div class="product">
+            <img src="https://image.api.playstation.com/vulcan/ap/rnd/202206/1610/7sdOl3Mn30GqUJEyU2WwLhQp.png" alt="صورة المنتج">
+            <p>السعر: $70</p>
+            <p>غير متوفر حاليًا</p>
+            <a href="" class="details-button">تفاصيل المنتج</a>
+            <a href="" class="buy-button" onclick="showNotAvailableMessage()">اشتري الآن</a>
+        </div>
+    </div>
+
+    <h2>اشتراكات البرامج</h2>
+    <div class="products-container">
+        <div class="product">
+            <img src="https://cdn.salla.sa/NjmbK/me2V3FLQ7GxieQggNCGdq4uT9FfzwZChFTBvjbVJ.png" alt="صورة المنتج">
+            <p>يوتيوب بريميوم الباقة الفردية</p>
+            <p>السعر : 8.99</p>
+            <a href="yu.html" class="details-button">تفاصيل المنتج</a>
+            <a href="1.html" class="buy-button">اشتري الآن</a>
+        </div>
+        <div class="product">
+            <img src="https://sm.ign.com/ign_mear/screenshot/default/1280x720_7k4n.jpg" alt="صورة المنتج">
+            <p>نتفليكس الباقة الاساسية لمدة شهر
+            </p>
+            <p>السعر: 15.99</p>
+            <a href="nt.html" class="details-button">تفاصيل المنتج</a>
+            <a href="1.html" class="buy-button">اشتري الآن</a>
+        </div>
+        <div class="product">
+            <img src="https://play-lh.googleusercontent.com/ql1j126uFttRQn2dPzIKNcoDIzADSqqhYFZBq0L8dyiwlqS86Utu2dg72N6SHNEBL9k" alt="صورة المنتج">
+            <p>اشتراك شاهد الباقة الاساسية </p>
+            <p>السعر: 10.99</p>
+            <a href="sh.html" class="details-button">تفاصيل المنتج</a>
+            <a href="1.html" class="buy-button">اشتري الآن</a>
+        </div>
+    </div>
+
+
+
+    
+    <div class="customer-reviews">
+        <div class="review-card">
+            <p>ممتاز جدا</p>
+            <p>أحمد من الرياض</p>
+            <div class="rating">
+                <span class="star">&#9734;</span> <!-- نجمة صفراء -->
+                <span class="star">&#9734;</span>
+                <span class="star">&#9734;</span>
+                <span class="star">&#9734;</span>
+                <span class="star">&#9734;</span>
+            </div>
+        </div>
+        <div class="review-card">
+            <p>روووعة واخلاق</p>
+            <p>عبدالله من القنفذة</p>
+            <div class="rating">
+                <span class="star">&#9734;</span> <!-- نجمة صفراء -->
+                <span class="star">&#9734;</span>
+                <span class="star">&#9734;</span>
+                <span class="star">&#9734;</span>
+                <span class="star">&#9734;</span>
+            </div>
+        </div>
+        <div class="review-card">
+            <p>من افضل المتاجر</p>
+            <p>باسل من الخبر</p>
+            <div class="rating">
+                <span class="star">&#9734;</span> <!-- نجمة صفراء -->
+                <span class="star">&#9734;</span>
+                <span class="star">&#9734;</span>
+                <span class="star">&#9734;</span>
+                <span class="star">&#9734;</span>
+            </div>
+        </div>
+        <div class="review-card">
+            <p>ممتاز</p>
+            <p>نادر من جدة</p>
+            <div class="rating">
+                <span class="star">&#9734;</span> <!-- نجمة صفراء -->
+                <span class="star">&#9734;</span>
+                <span class="star">&#9734;</span>
+                <span class="star">&#9734;</span>
+                <span class="star">&#9734;</span>
+            </div>
+        </div>
+        <div class="review-card">
+            <p>جيد</p>
+            <p>محمد من الرياض</p>
+            <div class="rating">
+                <span class="star">&#9734;</span> <!-- نجمة صفراء -->
+                <span class="star">&#9734;</span>
+                <span class="star">&#9734;</span>
+                <span class="star">&#9734;</span>
+                <span class="star">&#9734;</span>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- الشريط السفلي -->
+    <div class="footer">
+        <div>
+            <p>نبذة عن المتجر: نوفر لكم أهم الاشتراكات للقيمرز واشتراكات التطبيقات الأكثر أهمية</p>
+        </div>
+        <div>
+            <p>تواصل معنا:</p>
+            <a href="966597118963">رقم الهاتف</a> |
+            <a href="https://x.com/abo_samerh1?s=21">تويتر</a> |
+        </div>
+    </div>
+
+    <script>
+        function showNotAvailableMessage() {
+            alert("عذرًا، هذا المنتج غير متوفر حاليًا.");
+        }
+
+        function toggleMenu() {
+            var menu = document.getElementById("mobileMenu");
+            menu.style.display = (menu.style.display === "block") ? "none" : "block";
+        }
+
+        function toggleDarkMode() {
+            var body = document.body;
+            body.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+</html>
