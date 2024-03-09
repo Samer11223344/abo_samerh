@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة تسجيل المعلومات</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffffff; /* لون الخلفية */
+            color: #102211; /* لون النص */
+        }
+        form {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        label {
+            margin-bottom: 10px;
+        }
+        input {
+            padding: 8px;
+            margin-bottom: 20px;
+            width: 250px;
+            border-radius: 5px;
+            border: 1px solid #102211; /* إضافة حدود بلون معين */
+        }
+        input[type="submit"] {
+            display: none; /* إخفاء زر التسجيل */
+        }
+        a.button {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #ffffff;
+            color: #102211;
+            text-decoration: none;
+            border-radius: 5px;
+            border: 1px solid #102211;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        a.button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>منورنا عملينا العزيز سجل معلوماتك ليتم مراجعة طلبك</h1>
+    <form id="registrationForm" onsubmit="return validateForm()">
+        <label for="firstName">الاسم الأول:</label>
+        <input type="text" id="firstName" name="firstName" required>
+        <label for="lastName">الاسم الثاني:</label>
+        <input type="text" id="lastName" name="lastName" required>
+        <label for="phone">رقم الهاتف:</label>
+        <input type="tel" id="phone" name="phone" pattern="^((?:\+|00)966\d{9})|(05\d{8})$" required>
+        <a href="https://wa.me/966597118963?text=لقد تم الشراء من المتجر وجاي استلم طلبي :%20" target="_blank" rel="noopener noreferrer" class="button">تسجيل</a>
+    </form>
+
+    <script>
+        function validateForm() {
+            var firstName = document.getElementById("firstName").value;
+            var lastName = document.getElementById("lastName").value;
+            var phone = document.getElementById("phone").value;
+
+            if (firstName === "" || lastName === "" || phone === "") {
+                alert("يرجى إكمال جميع الحقول قبل التسجيل.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

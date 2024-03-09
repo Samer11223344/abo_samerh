@@ -1,0 +1,91 @@
+<style>
+  
+
+    /* تنسيق المنتجات */
+    .products-container {
+        overflow-x: auto; /* إظهار شريط التمرير الأفقي */
+        white-space: nowrap; /* منع العناصر من الانخفاض للأسفل عند العرض */
+        -webkit-overflow-scrolling: touch; /* تحسين التمرير على أجهزة iOS */
+        scroll-behavior: smooth; /* تمرير ناعم */
+        text-align: center; /* توسيط المحتوى */
+    }
+
+    .product {
+        display: inline-block;
+        margin: 20px;
+        text-align: center;
+        width: 200px; /* تعديل عرض المنتج */
+    }
+
+    .product img {
+        width: 150px; /* تعديل عرض الصورة */
+        height: 150px; /* تعديل ارتفاع الصورة */
+        object-fit: cover; /* تناسب الصورة داخل الإطار */
+        border: 2px solid #333; /* حدود مربع */
+        border-radius: 8px; /* زاوية مستديرة */
+    }
+
+    /* تحديد موقع أسماء الأقسام */
+    h2 {
+        text-align: right; /* توسيط النص إلى اليمين */
+        direction: rtl; /* تغيير اتجاه النص إلى اليمين */
+    }
+
+    /* تخصيص زر "اشتري الآن" */
+    .buy-button {
+        display: inline-block;
+        background-color: #102211; /* لون الخلفية */
+        color: white; /* لون النص */
+        padding: 10px 20px; /* المسافات الداخلية للزر */
+        text-align: center; /* توسيط النص داخل الزر */
+        text-decoration: none; /* إزالة التأثيرات النصية */
+        border-radius: 5px; /* زوايا مستديرة */
+        transition: background-color 0.3s; /* تغيير لون الخلفية بشكل سلس */
+    }
+
+    .buy-button:hover {
+        background-color: #45a049; /* تغيير لون الخلفية عند تحويم الماوس */
+    }
+
+    /* شريط سفلي */
+    .footer {
+        background-color: #1a1414; /* لون الخلفية */
+        color: white; /* لون النص */
+        padding: 20px; /* المسافات الداخلية */
+        text-align: center; /* توسيط النص */
+    }
+
+    .footer a {
+        color: white; /* لون الروابط */
+        text-decoration: none; /* إزالة التأثيرات النصية */
+        margin: 0 10px; /* المسافات بين الروابط */
+    }
+</style>
+
+
+
+
+<h2>اشتراكات بلس</h2>
+<div class="products-container">
+    <div class="product">
+        <img src="https://image.api.playstation.com/vulcan/ap/rnd/202206/1415/zf1APgZErNQcDBYLlrp7HGsX.png" alt="صورة المنتج">
+        <p>السعر: $50</p>
+        <p>غير متوفر حاليًا</p>
+        <a href="" class="details-button">تفاصيل المنتج</a>
+        <a href="" class="buy-button" onclick="showNotAvailableMessage()">اشتري الآن</a>
+    </div>
+    <div class="product">
+        <img src="https://image.api.playstation.com/vulcan/ap/rnd/202206/1515/RM9pdb59tlZpAJvyJMsuHKjq.png" alt="صورة المنتج">
+        <p>السعر: $60</p>
+        <p>غير متوفر حاليًا</p>
+        <a href="" class="details-button">تفاصيل المنتج</a>
+        <a href="" class="buy-button" onclick="showNotAvailableMessage()">اشتري الآن</a>
+    </div>
+    <div class="product">
+        <img src="https://image.api.playstation.com/vulcan/ap/rnd/202206/1610/7sdOl3Mn30GqUJEyU2WwLhQp.png" alt="صورة المنتج">
+        <p>السعر: $70</p>
+        <p>غير متوفر حاليًا</p>
+        <a href="" class="details-button">تفاصيل المنتج</a>
+        <a href="" class="buy-button" onclick="showNotAvailableMessage()">اشتري الآن</a>
+    </div>
+</div>
